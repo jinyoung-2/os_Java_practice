@@ -1,5 +1,5 @@
 //Circle 클래스의 객체 생성 및 활용
-package oosProject.ch4;
+package oosProject.ch04.실습;
 
 public class Circle_예제4_1 {    //Circle 클래스
     private int radius;

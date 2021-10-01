@@ -1,4 +1,4 @@
-package oosProject.ch4;
+package oosProject.ch04.실습;
 
 public class 예제4_4 {
     String title;

@@ -1,4 +1,4 @@
-package oosProject.ch4;
+package oosProject.ch04.실습;
 
 import java.util.Scanner;
 

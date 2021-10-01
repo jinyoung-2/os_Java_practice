@@ -1,5 +1,5 @@
 //Rectangle 클래스 만들기 연습
-package oosProject.ch4;
+package oosProject.ch04.실습;
 
 import java.util.Scanner;
 

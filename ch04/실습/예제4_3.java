@@ -1,5 +1,5 @@
 // 두 개의 생성자를 가진 Circle 클래스
-package oosProject.ch4;
+package oosProject.ch04.실습;
 
 public class 예제4_3 {
     int radius;

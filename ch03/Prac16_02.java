@@ -1,62 +1,62 @@
-package oos.practice.chap03;
-
-import java.util.Scanner;
-
-public class Prac16_02 {
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		String[] str= {"°¡À§","¹ÙÀ§","º¸"};
-		int winner=0;
-		
-		System.out.println("ÄÄÇ»ÅÍ¿Í °¡À§ ¹ÙÀ§ º¸ °ÔÀÓÀ» ÇÕ´Ï´Ù.");
-		
-		while(true) {
-			//»ç¿ëÀÚ °áÁ¤
-			System.out.print("°¡À§ ¹ÙÀ§ º¸!>>");
-			String user=in.nextLine();
-			
-			//Á¾·áÁ¶°Ç 
-			if(user.equals("±×¸¸")) {
-				System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù...");
-				break;
-			}
-			//EnterÅ° ÀÔ·Â½Ã, ÀÚµ¿À¸·Î ÄÄÇ»ÅÍ °áÁ¤
-			int randIndex=(int)(Math.random()*3);
-			String computer=str[randIndex];
-			
-			switch(user) {
-			case "°¡À§":
-				if(computer.equals("°¡À§"))
-					winner=1;
-				else if(computer.equals("¹ÙÀ§"))
-					winner=2;
-				else
-					winner=3;
-				 break;
-			case "¹ÙÀ§":
-				if (computer.equals("°¡À§"))
-					winner=3;
-				else if (computer.equals("¹ÙÀ§"))
-					winner=1;
-				else
-					winner=2;
-				break;
-			case "º¸":
-				if (computer.equals("°¡À§"))
-					winner=2;
-				else if (computer.equals("¹ÙÀ§"))
-					winner=3;
-				else
-					winner=1;
-				break;	 
-			}
-			
-			if (winner==1)
-				System.out.println("»ç¿ëÀÚ = "+user+" , ÄÄÇ»ÅÍ = "+computer+", ºñ°å½À´Ï´Ù.");
-			else if (winner==2)
-				System.out.println("»ç¿ëÀÚ = "+user+" , ÄÄÇ»ÅÍ = "+computer+", ÄÄÇ»ÅÍ°¡ ÀÌ°å½À´Ï´Ù.");
-			else
-				System.out.println("»ç¿ëÀÚ = "+user+" , ÄÄÇ»ÅÍ = "+computer+", »ç¿ëÀÚ°¡ ÀÌ°å½À´Ï´Ù.");
-		}
-	}
-}
+//package oos.practice.chap03;
+//
+//import java.util.Scanner;
+//
+//public class Prac16_02 {
+//	public static void main(String[] args) {
+//		Scanner in = new Scanner(System.in);
+//		String[] str= {"ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½"};
+//		int winner=0;
+//
+//		System.out.println("ï¿½ï¿½Ç»ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.");
+//
+//		while(true) {
+//			//ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//			System.out.print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½!>>");
+//			String user=in.nextLine();
+//
+//			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			if(user.equals("ï¿½×¸ï¿½")) {
+//				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½...");
+//				break;
+//			}
+//			//EnterÅ° ï¿½Ô·Â½ï¿½, ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//			int randIndex=(int)(Math.random()*3);
+//			String computer=str[randIndex];
+//
+//			switch(user) {
+//			case "ï¿½ï¿½ï¿½ï¿½":
+//				if(computer.equals("ï¿½ï¿½ï¿½ï¿½"))
+//					winner=1;
+//				else if(computer.equals("ï¿½ï¿½ï¿½ï¿½"))
+//					winner=2;
+//				else
+//					winner=3;
+//				 break;
+//			case "ï¿½ï¿½ï¿½ï¿½":
+//				if (computer.equals("ï¿½ï¿½ï¿½ï¿½"))
+//					winner=3;
+//				else if (computer.equals("ï¿½ï¿½ï¿½ï¿½"))
+//					winner=1;
+//				else
+//					winner=2;
+//				break;
+//			case "ï¿½ï¿½":
+//				if (computer.equals("ï¿½ï¿½ï¿½ï¿½"))
+//					winner=2;
+//				else if (computer.equals("ï¿½ï¿½ï¿½ï¿½"))
+//					winner=3;
+//				else
+//					winner=1;
+//				break;
+//			}
+//
+//			if (winner==1)
+//				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ = "+user+" , ï¿½ï¿½Ç»ï¿½ï¿½ = "+computer+", ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+//			else if (winner==2)
+//				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ = "+user+" , ï¿½ï¿½Ç»ï¿½ï¿½ = "+computer+", ï¿½ï¿½Ç»ï¿½Í°ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½Ï´ï¿½.");
+//			else
+//				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ = "+user+" , ï¿½ï¿½Ç»ï¿½ï¿½ = "+computer+", ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½Ï´ï¿½.");
+//		}
+//	}
+//}
