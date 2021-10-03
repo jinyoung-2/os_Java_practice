@@ -21,7 +21,6 @@ public class Prac08 {
         boolean findName = false;
         while(true){
             System.out.print("검색할 이름>>");
-//            in.nextLine();
             String name = in.next();
             if(name.equals("그만"))
                 break;
@@ -32,9 +31,8 @@ public class Prac08 {
                     break;
                 }
             }
-            if(findName==false){
+            if(!findName)
                 System.out.println(name+"이 없습니다.");
-            }
         }
         in.close();
     }

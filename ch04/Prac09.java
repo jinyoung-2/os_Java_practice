@@ -12,14 +12,21 @@ public class Prac09 {
 class ArrayUtil{
     public static int[] concat(int[] a, int[] b){
         /* 배열 a와 b를 연결한 새로운 배열 리턴*/
-        int[] c = new int[a.length+b.length];
+        int[] newArr = new int[a.length+b.length];
+        int newArrIndex=0;
         for(int i=0;i<a.length;i++){
-            c[i]=a[i];
+            newArr[newArrIndex++]=a[i];
         }
-        for(int i=a.length;i<a.length+b.length;i++){
-            c[i]=b[i-a.length];
+        for(int i=0;i<b.length;i++){
+            newArr[newArrIndex++]=b[i];
         }
-        return c;
+//        for(int i=0;i<a.length;i++){
+//            c[i]=a[i];
+//        }
+//        for(int i=a.length;i<a.length+b.length;i++){
+//            c[i]=b[i-a.length];
+//        }
+        return newArr;
     }
     public static void print(int[] a){
         /* 배열 a 출력*/
