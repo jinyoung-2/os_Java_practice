@@ -23,9 +23,9 @@ class Grade{
     private int sci;
     private int eng;
 
-    Grade(){
-        this(100,100,100);
-    }
+//    Grade(){
+//        this(100,100,100);
+//    }
     Grade(int math, int sci, int eng){
         this.math = math;
         this.sci = sci;

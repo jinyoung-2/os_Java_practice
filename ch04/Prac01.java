@@ -12,9 +12,9 @@ class TV{
     int year;
     int size;
 
-    TV(){
-        this("LG",2000,16);
-    }
+//    TV(){
+//        this("LG",2000,16);
+//    }
     TV(String company,int year,int size){
         this.company=company;
         this.year=year;

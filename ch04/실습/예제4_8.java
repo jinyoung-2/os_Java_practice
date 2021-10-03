@@ -4,8 +4,8 @@ package oosProject.ch04.실습;
 // 배열 속의 공백(' ') 문자를 ','로 대치하는 replaceSpace() 메소드를 작성하라
 public class 예제4_8 {
     static void printCharArray(char[] a){
-        for(int i:a){
-            System.out.print(a[i]);
+        for(char i:a){
+            System.out.print(i);
         }
         System.out.println();
 

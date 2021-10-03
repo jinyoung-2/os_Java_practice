@@ -1,8 +1,8 @@
-//객체배열
 package oosProject.ch4;
 
 import java.util.Scanner;
 
+//객체배열
 class Prac05 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -24,9 +24,9 @@ class Circle{
     private double x,y;
     private int radius;
 
-    public Circle(){
-        this(0,0,1);
-    }
+//    public Circle(){
+//        this(0,0,1);
+//    }
     public Circle(double x, double y, int radius){
         this.x=x;
         this.y=y;
