@@ -2,7 +2,7 @@ package oosProject.ch04.실습;
 
 import java.util.Scanner;
 
-public class 예제4_7 {
+public class 예제4_07 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 

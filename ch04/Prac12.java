@@ -8,6 +8,7 @@ public class Prac12 {
         Scanner in = new Scanner(System.in);
         System.out.println("명품콘서트홀 예약 시스템입니다.");
         Concert concert = new Concert();
+        boolean breakWhile=false;
         try{
             while(true){
                 System.out.print("예약:1, 조회:2, 취소:3, 끝내기:4 >> ");
@@ -23,14 +24,18 @@ public class Prac12 {
                         concert.cancelSeatAscend();
                         break;
                     case 4: //끝내기
+                        breakWhile=true;
                         break;
                     default :   //예외
                         System.out.println("없는 메뉴입니다. 다시 입력해 주세요.");
                 }
+                if(breakWhile)
+                    break;
             }
         }catch (InputMismatchException err){
             System.out.println("올바르지 않는 입력 형식입니다.");
         }
+        in.close();
     }
 }
 
