@@ -20,11 +20,8 @@ class TV{
 class ColorTV extends TV{
     private int color;
     public ColorTV(int size, int color){
-        super(size);    //여기 check
+        super(size);
         this.color=color;
-    }
-    protected int getColor(){
-        return color;
     }
     protected void printProperty(){
         System.out.println(getSize()+"인치 "+color+"컬러");

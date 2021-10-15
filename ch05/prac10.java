@@ -2,43 +2,50 @@ package oosProject.ch05;
 
 class Dictionary extends PairMap {
     private int set;
-    public Dictionary(int num) {
+    public Dictionary(int num){
         keyArray = new String[num];
         valueArray = new String[num];
-        this.set = 0;
+        set=0;
     }
 
+    @Override
     public String get(String key) {
-        for(int i=0; i<keyArray.length; i++) {
-            if(key.equals(keyArray[i])) {
+        for(int i=0;i< keyArray.length;i++){
+            if(key.equals(keyArray[i])){
                 return valueArray[i];
             }
         }
-        return null; // 원하는 key가 없다면 null 리턴
+        return null;
     }
+
+    @Override
     public void put(String key, String value) {
-        for(int i=0; i<keyArray.length; i++) {
-            if(key.equals(keyArray[i])) {
-                keyArray[i] = key;
-                valueArray[i] = value;
-                return; // 중복된 key가 있다면 저장하고 함수 종료
+        for(int i=0;i<keyArray.length;i++){
+            if(key.equals(keyArray[i])){     //주의사항:: 조건식을 key.equals(keyArray[i])로 작성시, NULLPointerException 발생
+                valueArray[i]=value;
+                return ;
             }
         }
-        keyArray[set] = key;
-        valueArray[set] = value;
+        //기존에 key가 없는 경우
+        keyArray[set]=key;
+        valueArray[set]=value;
         set++;
     }
+
+    @Override
     public String delete(String key) {
-        for(int i=0; i<keyArray.length; i++) {
-            if(key.equals(keyArray[i])) {
-                String s = valueArray[i];
-                keyArray[i] = null;
-                valueArray[i] = null;
-                return s;  // 삭제된 value 값 리턴
+        for(int i=0;i< keyArray.length;i++){
+            if(key.equals(keyArray[i])){
+                String value = valueArray[i];
+                keyArray[i]=null;
+                valueArray[i]=null;
+                return value;
             }
         }
-        return null; // 삭제된 것이 없다면 null 리턴
+        return null;
     }
+
+    @Override
     public int length() {
         return set;
     }
@@ -55,5 +62,4 @@ public class prac10 {
         dic.delete("황기태");
         System.out.println("황기태의 값은 "+dic.get("황기태")); //삭제된 아이템 접근
     }
-
 }

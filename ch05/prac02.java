@@ -14,7 +14,8 @@ class IPTV extends ColorTV{
         this.ip=ip;
     }
     @Override
-    public void printProperty(){
-        System.out.println("나의 IPTV는 "+ip+" 주소의 "+getSize()+"인치 "+getColor()+"컬러");
+    protected void printProperty(){
+        System.out.println("나의 IPTV는 "+ip+" 주소의 ");
+        super.printProperty();      //중요 Point:: super를 이용해 부모 클래스 메서드 호출가능
     }
 }

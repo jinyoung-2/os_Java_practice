@@ -7,6 +7,7 @@ public class prac04 {
     }
 }
 
+// Km -> mile(마일)
 class Km2Mile extends Converter{
     public Km2Mile(double ratio) {
         this.ratio = ratio;
