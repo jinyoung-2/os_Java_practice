@@ -15,12 +15,12 @@ class Word { // 영어 단어와 한글 단어를 쌍으로 가진 하나의 단
 
 }
 
-public class WordQuiz_prac12 {
+public class prac12_WordQuiz {
     private String name; // WordQuiz 프로그램의 이름
     private Scanner scanner = new Scanner(System.in);
     private Vector<Word> v;
 
-    public WordQuiz_prac12(String name) {
+    public prac12_WordQuiz(String name) {
         this.name = name;
         v = new Vector<Word>();
         v.add(new Word("love", "사랑"));
@@ -153,7 +153,7 @@ public class WordQuiz_prac12 {
     }
 
     public static void main(String[] args) {
-        WordQuiz_prac12 quiz = new WordQuiz_prac12("명품영어");
+        prac12_WordQuiz quiz = new prac12_WordQuiz("명품영어");
         quiz.run();
     }
 }

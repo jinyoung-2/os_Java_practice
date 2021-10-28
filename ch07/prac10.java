@@ -3,7 +3,7 @@ package oosProject.ch07;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class prac010 {
+public class prac10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Vector<Shape> v = new Vector<Shape>();
